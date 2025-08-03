@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Designer Portfolio</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Muneeb<span>Visulas</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ SLIDER -->
+  <section class="slider">
+    <div class="slide active" style="background-image: url('images/pic3.jpg');">
+      <div class="hero-content">
+        <h1>Hi, I’m <span> Muneeb </span></h1>
+        <p>A passionate Graphic Designer who turns ideas into visuals</p>
+        <a href="contact.html" class="btn">Hire Me</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('images/pic2.jpg');">
+      <div class="hero-content">
+        <h1>Hi, I’m <span> Muneeb </span></h1>
+        <p>A passionate Graphic Designer who turns ideas into visuals</p>
+        <a href="contact.html" class="btn">Hire Me</a>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('images/pic4.jpg');">
+      <div class="hero-content">
+       <h1>Hi, I’m <span> Muneeb </span></h1>
+        <p>A passionate Graphic Designer who turns ideas into visuals</p>
+        <a href="contact.html" class="btn">Hire Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ SERVICES -->
+  <section class="services-preview">
+    <h2 data-aos="fade-up">What I Do</h2>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Logo Design</h3>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-photo-video"></i>
+        <h3>Thumbnail Design</h3>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-file-alt"></i>
+        <h3>Flyer Design</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ PORTFOLIO -->
+  <section class="portfolio-preview">
+    <h2 data-aos="fade-up">Featured Work</h2>
+    <div class="portfolio-grid">
+      <img src="images/pic8.jpg" alt="Design 1" data-aos="fade-right">
+      <img src="images/pic6.jpg" alt="Design 2" data-aos="fade-up">
+      <img src="images/pic7.jpg" alt="Design 3" data-aos="fade-left">
+    </div>
+    <br>
+    <a href="portfolio.html" class="btn" data-aos="zoom-in">View Full Portfolio</a>
+  </section>
+
+  <!-- ✅ CTA -->
+  <section class="cta" data-aos="fade-up">
+    <h2>Let’s Create Something Amazing Together</h2>
+    <a href="contact.html" class="btn">Contact Me</a>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <p>© 2025 Muneeb visulas | All rights reserved.</p>
+    <div class="social-links">
+       <a href="https://www.instagram.com/thumbnail_88"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@muneebdesign01"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/923216900234"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Slider Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll('.slide');
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+      }
+
+      showSlide(current);
+
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
