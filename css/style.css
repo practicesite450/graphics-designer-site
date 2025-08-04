@@ -44,6 +44,36 @@ ul {
 .nav-links a:hover {
   color: #ff4c60;
 }
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
 /* SLIDER */
 .slider {
