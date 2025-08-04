@@ -15,15 +15,18 @@
   <!-- ✅ NAVBAR -->
   <header>
     <nav class="navbar">
-       <div class="logo">Muneeb<span>Visulas</span></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="logo">Muneeb<span>Visulas</span></div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="contact.html"  >Contact</a></li>
+  </ul>
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>
   </header>
 
   <!-- ✅ SERVICES SECTION -->
@@ -79,6 +82,15 @@
   <!-- ✅ AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
 
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
